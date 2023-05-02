@@ -1,5 +1,6 @@
-const { Configuration, OpenAIApi } = require("openai");
-require('dotenv').config()
+import { Configuration, OpenAIApi } from "openai";
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
 
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
@@ -7,15 +8,11 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-async function runComplention (message) {
+export default async function runComplention (message) {
     const completion = await openai.createCompletion({
         model: "gpt-3.5-turbo",
         prompt: message,
         max_tokens: 1400,
     });
     return completion.data.choices[0].text;
-}
-
-module.exports = {
-    runComplention
 }

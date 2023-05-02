@@ -1,10 +1,11 @@
-const { Client } = require('whatsapp-web.js');
-const qrcode = require('qrcode-terminal');
+import { Client } from 'whatsapp-web.js'; 
+import qrcode from 'qrcode-terminal';
+import openai from '../llms/openai.js';
+
+
 const client = new Client();
-const openai = require('../llms/openai');
 
-
-const start = () => {
+export const start = () => {
     client.on('qr', (qr) => {
         qrcode.generate(qr, {small: true});
     });
@@ -22,8 +23,4 @@ const start = () => {
     });
     
     client.initialize();    
-}
-
-module.exports = {
-    start
 }

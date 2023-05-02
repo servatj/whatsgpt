@@ -1,7 +1,7 @@
-const whatsapp = require('./apps/whatsapp');
+import { start } from './apps/whatsapp.js';
 
 const main = async () => {
-    whatsapp.start();
+    start();
 }
 
 main()

@@ -24,12 +24,6 @@ Start the bot using the my-whatsapp-gpt-bot command:
 OPENAI_API_KEY=your_api_key whatsgpt
 ```
 
-or with npx
-
-```sh
-OPENAI_API_KEY=your_api_key npx whatsgpt
-```
-
 Once the bot is running a qr will generated
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/0*i1uorrA3688L-_iO.png)
