@@ -1,0 +1,22 @@
+{
+  "name": "whatsgpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scrips": {
+    "start": "node src/index.js"
+  },
+  "bin": {
+    "whatsgpt": "src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1",
+    "qrcode-terminal": "^0.12.0",
+    "user": "^0.0.0",
+    "whatsapp-web.js": "^1.19.5"
+  }
+}
