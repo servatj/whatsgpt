@@ -30,7 +30,17 @@ or with npx
 OPENAI_API_KEY=your_api_key npx whatsgpt
 ```
 
-Once the bot is running, send a WhatsApp message to the Twilio phone number that you purchased. The bot will respond with a GPT-3 generated message.
+Once the bot is running a qr will generated
+
+![](https://miro.medium.com/v2/resize:fit:720/format:webp/0*i1uorrA3688L-_iO.png)
+
+Scan the QR with your whatsapp devices option
+
+you will see client ready message
+
+You should keep open the app so the bot continues working.
+
+## TODO deploy in a server instructions
 
 ## 📦 Dependencies
 
