@@ -3,12 +3,12 @@ import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-d
 dotenv.config()
 
 const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.OPENAI_API_KEY || '',
   });
-
+   
 const openai = new OpenAIApi(configuration);
 
-export default async function runComplention (message) {
+export async function runComplention (message: string) {
     const completion = await openai.createCompletion({
         model: "gpt-3.5-turbo",
         prompt: message,

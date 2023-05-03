@@ -1,9 +1,9 @@
 import { Client } from 'whatsapp-web.js'; 
 import qrcode from 'qrcode-terminal';
-import openai from '../llms/openai.js';
+import { runComplention } from '../llms/openai.js';
 
 
-const client = new Client();
+const client = new Client({});
 
 export const start = () => {
     client.on('qr', (qr) => {
@@ -18,7 +18,7 @@ export const start = () => {
         console.log(message.body);
     
         if(message.body.startsWith("#")) {
-            openai.runComplention(message.body.substring(1)).then(result => message.reply(result));
+            runComplention(message.body.substring(1)).then((result: any) => message.reply(result));
         }
     });
     

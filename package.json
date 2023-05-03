@@ -1,10 +1,12 @@
 {
   "name": "whatsgpt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "npm run build && node dist/index.js",
+    "build": "tsc && rimraf ./dist && rollup -c",
+    "dev": "nodemon src/index.ts"
   },
   "bin": {
     "whatsgpt": "src/index.js"
@@ -13,18 +15,22 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.0.3",
+  "peerDependencies": {
     "openai": "^3.2.1",
-    "qrcode-terminal": "^0.12.0",
-    "user": "^0.0.0",
-    "whatsapp-web.js": "^1.19.5"
+    "whatsapp-web.js": "^1.19.5",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "dependencies": {
+    "@types/qrcode-terminal": "^0.12.0",
+    "dotenv": "^16.0.3",
+    "user": "^0.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
-    "babel-loader": "^9.1.2",
-    "webpack": "^5.81.0",
-    "webpack-cli": "^5.0.2"
+    "rimraf": "^5.0.0",
+    "rollup": "^3.21.3",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   }
 }
