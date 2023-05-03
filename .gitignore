@@ -1,2 +1,12 @@
+*.log*
+.DS_Store
+build/
+dist/
+tgbot-dist/
+.eslintcache
 node_modules
 .env
+.env.local
+Dockerfile
+.dockerignore
+*.toml

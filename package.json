@@ -1,8 +1,8 @@
 {
   "name": "whatsgpt",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "build": "tsc && rimraf ./dist && rollup -c",
