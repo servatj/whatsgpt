@@ -1,19 +1,39 @@
 {
   "name": "whatsgpt",
-  "version": "0.0.7",
-  "description": "",
-  "main": "dist/index.js",
+  "version": "0.0.9",
+  "description": "Whatsapp gpt bot",
+  "main": "index.js",
+  "homepage": "https://www.npmjs.com/package/whatsgpt",
+  "keywords": [
+    "CLI",
+    "javascript",
+    "typescript",
+    "openai",
+    "whatsapp",
+    "GPT"
+  ],
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/servatj/whatsgpt"
+  },
+  "bugs": {
+    "url": "https://github.com/servatj/whatsgpt/issues",
+    "email": "jservatlorca@gmail.com"
+  },
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "build": "tsc && rimraf ./dist && rollup -c",
     "dev": "nodemon src/index.ts"
   },
+  "files": [
+    "index.js",
+    "dist"
+  ],
   "bin": {
     "whatsgpt": "index.js"
   },
   "type": "module",
-  "keywords": [],
-  "author": "",
+  "author": "Josep Servat",
   "license": "ISC",
   "peerDependencies": {
     "openai": "^3.2.1",
