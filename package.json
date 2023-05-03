@@ -9,7 +9,7 @@
     "dev": "nodemon src/index.ts"
   },
   "bin": {
-    "whatsgpt": "src/index.js"
+    "whatsgpt": "index.js"
   },
   "type": "module",
   "keywords": [],
